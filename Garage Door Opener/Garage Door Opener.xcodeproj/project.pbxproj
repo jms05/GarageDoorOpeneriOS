@@ -1,0 +1,336 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		940A9D2F1F24A323001AA42F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940A9D2E1F24A323001AA42F /* AppDelegate.swift */; };
+		940A9D311F24A323001AA42F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940A9D301F24A323001AA42F /* ViewController.swift */; };
+		940A9D341F24A323001AA42F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 940A9D321F24A323001AA42F /* Main.storyboard */; };
+		940A9D361F24A323001AA42F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 940A9D351F24A323001AA42F /* Assets.xcassets */; };
+		940A9D391F24A323001AA42F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 940A9D371F24A323001AA42F /* LaunchScreen.storyboard */; };
+		940A9D471F24AA7A001AA42F /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940A9D431F24AA7A001AA42F /* Result.swift */; };
+		940A9D481F24AA7A001AA42F /* Socket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940A9D441F24AA7A001AA42F /* Socket.swift */; };
+		940A9D491F24AA7A001AA42F /* TCPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940A9D461F24AA7A001AA42F /* TCPClient.swift */; };
+		940A9D4B1F24AF58001AA42F /* ytcpsocket.c in Sources */ = {isa = PBXBuildFile; fileRef = 940A9D4A1F24AF58001AA42F /* ytcpsocket.c */; };
+		940A9D4D1F260827001AA42F /* GarageDoor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940A9D4C1F260827001AA42F /* GarageDoor.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		940A9D2B1F24A323001AA42F /* Garage Door Opener.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Garage Door Opener.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		940A9D2E1F24A323001AA42F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		940A9D301F24A323001AA42F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		940A9D331F24A323001AA42F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		940A9D351F24A323001AA42F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		940A9D381F24A323001AA42F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		940A9D3A1F24A323001AA42F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		940A9D431F24AA7A001AA42F /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Result.swift; path = ../../../../../Desktop/swift/Result.swift; sourceTree = "<group>"; };
+		940A9D441F24AA7A001AA42F /* Socket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Socket.swift; path = ../../../../../Desktop/swift/Socket.swift; sourceTree = "<group>"; };
+		940A9D451F24AA7A001AA42F /* SwiftSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SwiftSocket.h; path = ../../../../../Desktop/swift/SwiftSocket.h; sourceTree = "<group>"; };
+		940A9D461F24AA7A001AA42F /* TCPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TCPClient.swift; path = ../../../../../Desktop/swift/TCPClient.swift; sourceTree = "<group>"; };
+		940A9D4A1F24AF58001AA42F /* ytcpsocket.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = ytcpsocket.c; path = ../../../../../Desktop/sslServer/ytcpsocket.c; sourceTree = "<group>"; };
+		940A9D4C1F260827001AA42F /* GarageDoor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GarageDoor.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		940A9D281F24A323001AA42F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		940A9D221F24A323001AA42F = {
+			isa = PBXGroup;
+			children = (
+				940A9D2D1F24A323001AA42F /* Garage Door Opener */,
+				940A9D2C1F24A323001AA42F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		940A9D2C1F24A323001AA42F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				940A9D2B1F24A323001AA42F /* Garage Door Opener.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		940A9D2D1F24A323001AA42F /* Garage Door Opener */ = {
+			isa = PBXGroup;
+			children = (
+				940A9D4A1F24AF58001AA42F /* ytcpsocket.c */,
+				940A9D431F24AA7A001AA42F /* Result.swift */,
+				940A9D441F24AA7A001AA42F /* Socket.swift */,
+				940A9D451F24AA7A001AA42F /* SwiftSocket.h */,
+				940A9D461F24AA7A001AA42F /* TCPClient.swift */,
+				940A9D2E1F24A323001AA42F /* AppDelegate.swift */,
+				940A9D301F24A323001AA42F /* ViewController.swift */,
+				940A9D321F24A323001AA42F /* Main.storyboard */,
+				940A9D351F24A323001AA42F /* Assets.xcassets */,
+				940A9D371F24A323001AA42F /* LaunchScreen.storyboard */,
+				940A9D3A1F24A323001AA42F /* Info.plist */,
+				940A9D4C1F260827001AA42F /* GarageDoor.swift */,
+			);
+			path = "Garage Door Opener";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		940A9D2A1F24A323001AA42F /* Garage Door Opener */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 940A9D3D1F24A323001AA42F /* Build configuration list for PBXNativeTarget "Garage Door Opener" */;
+			buildPhases = (
+				940A9D271F24A323001AA42F /* Sources */,
+				940A9D281F24A323001AA42F /* Frameworks */,
+				940A9D291F24A323001AA42F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Garage Door Opener";
+			productName = "Garage Door Opener";
+			productReference = 940A9D2B1F24A323001AA42F /* Garage Door Opener.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		940A9D231F24A323001AA42F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Joao Silva";
+				TargetAttributes = {
+					940A9D2A1F24A323001AA42F = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = MY8ZJ6WCPA;
+						LastSwiftMigration = 0830;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 940A9D261F24A323001AA42F /* Build configuration list for PBXProject "Garage Door Opener" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 940A9D221F24A323001AA42F;
+			productRefGroup = 940A9D2C1F24A323001AA42F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				940A9D2A1F24A323001AA42F /* Garage Door Opener */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		940A9D291F24A323001AA42F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				940A9D391F24A323001AA42F /* LaunchScreen.storyboard in Resources */,
+				940A9D361F24A323001AA42F /* Assets.xcassets in Resources */,
+				940A9D341F24A323001AA42F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		940A9D271F24A323001AA42F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				940A9D481F24AA7A001AA42F /* Socket.swift in Sources */,
+				940A9D4D1F260827001AA42F /* GarageDoor.swift in Sources */,
+				940A9D491F24AA7A001AA42F /* TCPClient.swift in Sources */,
+				940A9D471F24AA7A001AA42F /* Result.swift in Sources */,
+				940A9D311F24A323001AA42F /* ViewController.swift in Sources */,
+				940A9D4B1F24AF58001AA42F /* ytcpsocket.c in Sources */,
+				940A9D2F1F24A323001AA42F /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		940A9D321F24A323001AA42F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				940A9D331F24A323001AA42F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		940A9D371F24A323001AA42F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				940A9D381F24A323001AA42F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		940A9D3B1F24A323001AA42F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		940A9D3C1F24A323001AA42F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		940A9D3E1F24A323001AA42F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = MY8ZJ6WCPA;
+				INFOPLIST_FILE = "Garage Door Opener/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.xamarim.Garage-Door-Opener";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		940A9D3F1F24A323001AA42F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = MY8ZJ6WCPA;
+				INFOPLIST_FILE = "Garage Door Opener/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.xamarim.Garage-Door-Opener";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		940A9D261F24A323001AA42F /* Build configuration list for PBXProject "Garage Door Opener" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				940A9D3B1F24A323001AA42F /* Debug */,
+				940A9D3C1F24A323001AA42F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		940A9D3D1F24A323001AA42F /* Build configuration list for PBXNativeTarget "Garage Door Opener" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				940A9D3E1F24A323001AA42F /* Debug */,
+				940A9D3F1F24A323001AA42F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 940A9D231F24A323001AA42F /* Project object */;
+}
