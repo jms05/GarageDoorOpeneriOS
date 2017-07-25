@@ -138,5 +138,21 @@ class Server:
             cTread.run()
 
 
-s = Server(PORT)
-s.runServer()
+def logE(e, filename):
+	f = open(filename, 'a')
+	f.write(("-"*50)+"\n")
+	now =datetime.datetime.now()
+	f.write(str(now)+"\n")
+	f.write(str(e)+"\n")
+	f.write(("-"*50)+"\n")
+	f.close()
+	os.system("reboot")
+
+
+
+
+try:
+	s = Server(PORT)
+	s.runServer()
+ except Exception as e:
+	logE(e,"/home/pi/garageLog.log")
