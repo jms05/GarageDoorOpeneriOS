@@ -18,16 +18,35 @@ validKeys = {}
 PORT =10001
 remoteControl = 17 # gpio pin on relay
 GPIO.setup(remoteControl,GPIO.OUT)
+openSinalPin=22
+GPIO.setup(openSinalPin,GPIO.IN,pull_up_down=GPIO.PUD_UP)
+closeSinalPin=27
+GPIO.setup(closeSinalPin,GPIO.IN,pull_up_down=GPIO.PUD_UP)
+
 
 on = False
 off = True
 
 GPIO.output(remoteControl, off)
 
+
+def readSingalFromPin(pin):
+    if GPIO.input(pin):
+        return on
+    else:
+        return off
+
+
+def isOpen(pin=openSinalPin):
+    return readSingalFromPin(pin)
+
+def isClose(pin=closeSinalPin):
+    return readSingalFromPin(pin)
+
+
+
 def randomword(length):
    return ''.join(random.choice(string.lowercase+ string.uppercase+string.digits) for i in range(length))
-
-
 
 
 
@@ -78,8 +97,14 @@ def genKey(length=35,validTIME=30):
 
 def checkstatus():
     print "CHECK"
-    return DoorUnknown
-    return random.randint(-1, 1)
+    open = isOpen()
+    close = isClose()
+    if open == close:
+    	return DoorUnknown
+    elif open:
+	return DoorOpen
+    else:
+	return DoorClosed
 
 def isToend(data):
     return ("FIM" in data)
@@ -154,5 +179,5 @@ def logE(e, filename):
 try:
 	s = Server(PORT)
 	s.runServer()
- except Exception as e:
+except Exception as e:
 	logE(e,"/home/pi/garageLog.log")
