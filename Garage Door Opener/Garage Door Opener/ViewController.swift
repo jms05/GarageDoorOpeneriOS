@@ -69,7 +69,7 @@ class ViewController: UIViewController, UITextFieldDelegate{
                 connectButton.setTitle("Disconnect", for: .normal)
             }
         }else{
-            app?.endComunication()
+            _ = app?.endComunication()
             disconnect()
             
         }

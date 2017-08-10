@@ -12,11 +12,11 @@
 		940A9D341F24A323001AA42F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 940A9D321F24A323001AA42F /* Main.storyboard */; };
 		940A9D361F24A323001AA42F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 940A9D351F24A323001AA42F /* Assets.xcassets */; };
 		940A9D391F24A323001AA42F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 940A9D371F24A323001AA42F /* LaunchScreen.storyboard */; };
-		940A9D471F24AA7A001AA42F /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940A9D431F24AA7A001AA42F /* Result.swift */; };
-		940A9D481F24AA7A001AA42F /* Socket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940A9D441F24AA7A001AA42F /* Socket.swift */; };
-		940A9D491F24AA7A001AA42F /* TCPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940A9D461F24AA7A001AA42F /* TCPClient.swift */; };
 		940A9D4B1F24AF58001AA42F /* ytcpsocket.c in Sources */ = {isa = PBXBuildFile; fileRef = 940A9D4A1F24AF58001AA42F /* ytcpsocket.c */; };
 		940A9D4D1F260827001AA42F /* GarageDoor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940A9D4C1F260827001AA42F /* GarageDoor.swift */; };
+		94454C861F3CD970004D60E0 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94454C821F3CD970004D60E0 /* Result.swift */; };
+		94454C871F3CD970004D60E0 /* Socket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94454C831F3CD970004D60E0 /* Socket.swift */; };
+		94454C881F3CD970004D60E0 /* TCPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94454C851F3CD970004D60E0 /* TCPClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,12 +27,12 @@
 		940A9D351F24A323001AA42F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		940A9D381F24A323001AA42F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		940A9D3A1F24A323001AA42F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		940A9D431F24AA7A001AA42F /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Result.swift; path = ../../../../../Desktop/swift/Result.swift; sourceTree = "<group>"; };
-		940A9D441F24AA7A001AA42F /* Socket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Socket.swift; path = ../../../../../Desktop/swift/Socket.swift; sourceTree = "<group>"; };
-		940A9D451F24AA7A001AA42F /* SwiftSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SwiftSocket.h; path = ../../../../../Desktop/swift/SwiftSocket.h; sourceTree = "<group>"; };
-		940A9D461F24AA7A001AA42F /* TCPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TCPClient.swift; path = ../../../../../Desktop/swift/TCPClient.swift; sourceTree = "<group>"; };
 		940A9D4A1F24AF58001AA42F /* ytcpsocket.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = ytcpsocket.c; path = ../../../../../Desktop/sslServer/ytcpsocket.c; sourceTree = "<group>"; };
 		940A9D4C1F260827001AA42F /* GarageDoor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GarageDoor.swift; sourceTree = "<group>"; };
+		94454C821F3CD970004D60E0 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Sources/Result.swift; sourceTree = "<group>"; };
+		94454C831F3CD970004D60E0 /* Socket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Socket.swift; path = Sources/Socket.swift; sourceTree = "<group>"; };
+		94454C841F3CD970004D60E0 /* SwiftSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SwiftSocket.h; path = Sources/SwiftSocket.h; sourceTree = "<group>"; };
+		94454C851F3CD970004D60E0 /* TCPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TCPClient.swift; path = Sources/TCPClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,11 +65,11 @@
 		940A9D2D1F24A323001AA42F /* Garage Door Opener */ = {
 			isa = PBXGroup;
 			children = (
+				94454C821F3CD970004D60E0 /* Result.swift */,
+				94454C831F3CD970004D60E0 /* Socket.swift */,
+				94454C841F3CD970004D60E0 /* SwiftSocket.h */,
+				94454C851F3CD970004D60E0 /* TCPClient.swift */,
 				940A9D4A1F24AF58001AA42F /* ytcpsocket.c */,
-				940A9D431F24AA7A001AA42F /* Result.swift */,
-				940A9D441F24AA7A001AA42F /* Socket.swift */,
-				940A9D451F24AA7A001AA42F /* SwiftSocket.h */,
-				940A9D461F24AA7A001AA42F /* TCPClient.swift */,
 				940A9D2E1F24A323001AA42F /* AppDelegate.swift */,
 				940A9D301F24A323001AA42F /* ViewController.swift */,
 				940A9D321F24A323001AA42F /* Main.storyboard */,
@@ -155,10 +155,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				940A9D481F24AA7A001AA42F /* Socket.swift in Sources */,
+				94454C881F3CD970004D60E0 /* TCPClient.swift in Sources */,
 				940A9D4D1F260827001AA42F /* GarageDoor.swift in Sources */,
-				940A9D491F24AA7A001AA42F /* TCPClient.swift in Sources */,
-				940A9D471F24AA7A001AA42F /* Result.swift in Sources */,
+				94454C861F3CD970004D60E0 /* Result.swift in Sources */,
+				94454C871F3CD970004D60E0 /* Socket.swift in Sources */,
 				940A9D311F24A323001AA42F /* ViewController.swift in Sources */,
 				940A9D4B1F24AF58001AA42F /* ytcpsocket.c in Sources */,
 				940A9D2F1F24A323001AA42F /* AppDelegate.swift in Sources */,
