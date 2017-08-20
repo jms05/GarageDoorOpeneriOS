@@ -29,6 +29,17 @@ off = True
 
 GPIO.output(remoteControl, off)
 
+def logE(e, filename):
+    f = open(filename, 'a')
+    f.write(("-"*50)+"\n")
+    now =datetime.datetime.now()
+    f.write(str(now)+"\n")
+    f.write(str(e)+"\n")
+    f.write(("-"*50)+"\n")
+    f.close()
+    os.system("reboot")
+
+
 
 def readSingalFromPin(pin):
     if GPIO.input(pin):
@@ -144,6 +155,34 @@ class cliente_Thread (threading.Thread):
         print "THREAD DONE"
 
 
+
+class ping_Thread (threading.Thread):
+    def __init__(self):
+      threading.Thread.__init__(self)
+
+    def check_ping(self,hostname):
+        response = os.system("ping -c 1 " + hostname)
+        return response==0
+
+    def checkConnect(self):
+        hostnames = ["192.168.1.1.","8.8.8.8"]
+        for hostname in hostnames:
+            if check_ping(hostname) == False:
+                return (False,hostname)
+        return (True,"")
+
+    def run(self):
+        while True:
+            try: 
+                result,host = self.checkConnect()
+            except Exception as e:
+                logE(e,"/home/pi/garageLog.log")
+
+            if result==False:
+                logE("PING FAIL TO " + host,"/home/pi/garageLog.log")
+        time.sleep(15)
+
+
 class Server:
     def __init__(self, port):
         self.port=port
@@ -163,20 +202,13 @@ class Server:
             cTread.run()
 
 
-def logE(e, filename):
-	f = open(filename, 'a')
-	f.write(("-"*50)+"\n")
-	now =datetime.datetime.now()
-	f.write(str(now)+"\n")
-	f.write(str(e)+"\n")
-	f.write(("-"*50)+"\n")
-	f.close()
-	os.system("reboot")
 
 
 
 
 try:
+    pThread = ping_Thread()
+    pThread.run()
 	s = Server(PORT)
 	s.runServer()
 except Exception as e:
