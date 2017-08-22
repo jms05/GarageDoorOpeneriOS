@@ -7,6 +7,7 @@ import RPi.GPIO as GPIO
 import time
 import datetime
 import os
+import sys
 GPIO.setmode(GPIO.BCM)
 
 DoorOpen = 1
@@ -37,6 +38,7 @@ def logE(e, filename):
     f.write(str(e)+"\n")
     f.write(("-"*50)+"\n")
     f.close()
+#    sys.exit(str(e))
     os.system("reboot")
 
 
@@ -167,22 +169,24 @@ class ping_Thread (threading.Thread):
     def checkConnect(self):
         hostnames = ["192.168.1.1.","8.8.8.8"]
         for hostname in hostnames:
-            if check_ping(hostname) == False:
+            if self.check_ping(hostname) == False:
                 return (False,hostname)
         return (True,"")
 
     def run(self):
 	print "Ping Tread Will start in 35 seconds"
-		time.sleep(35)
-        while True:
-            try: 
-                result,host = self.checkConnect()
-            except Exception as e:
-                logE(e,"/home/pi/garageLog.log")
+	time.sleep(35)
+	print "Ping Thread Started"
+	while True:
+		try: 
+			result,host = self.checkConnect()
+			print result
+            	except Exception as e:
+                	logE(e,"/home/pi/garageLog.log")
 
-            if result==False:
-                logE("PING FAIL TO " + host,"/home/pi/garageLog.log")
-        time.sleep(15)
+            	if result==False:
+                	logE("PING FAIL TO " + host,"/home/pi/garageLog.log")
+        	time.sleep(35)
 
 
 class Server:
@@ -201,7 +205,7 @@ class Server:
             print "WHAIT CONNECTION"
             newsocket, fromaddr = self.bindsocket.accept()
             cTread = cliente_Thread(newsocket)
-            cTread.run()
+            cTread.start()
 
 
 
@@ -209,8 +213,8 @@ class Server:
 
 
 try:
-    pThread = ping_Thread()
-    pThread.run()
+    	pThread = ping_Thread()
+    	pThread.start()
 	s = Server(PORT)
 	s.runServer()
 except Exception as e:
