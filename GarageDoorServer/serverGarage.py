@@ -172,6 +172,8 @@ class ping_Thread (threading.Thread):
         return (True,"")
 
     def run(self):
+	print "Ping Tread Will start in 35 seconds"
+		time.sleep(35)
         while True:
             try: 
                 result,host = self.checkConnect()
