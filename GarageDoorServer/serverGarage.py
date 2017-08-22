@@ -168,15 +168,15 @@ class ping_Thread (threading.Thread):
         return response==0
 
     def checkConnect(self):
-        hostnames = ["192.168.1.1.","8.8.8.8"]
+        hostnames = ["192.168.1.1","8.8.8.8"]
         for hostname in hostnames:
             if self.check_ping(hostname) == False:
                 return (False,hostname)
         return (True,"")
 
     def run(self):
-	print "Ping Tread Will start in "+str(self.time)+" seconds"
-	time.sleep(self.time)
+	print "Ping Tread Will start in "+str(self.time*20)+" seconds"
+	time.sleep(self.time*20)
 	print "Ping Thread Started"
 	while True:
 		try: 
