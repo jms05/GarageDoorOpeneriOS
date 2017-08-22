@@ -159,8 +159,9 @@ class cliente_Thread (threading.Thread):
 
 
 class ping_Thread (threading.Thread):
-    def __init__(self):
-      threading.Thread.__init__(self)
+    def __init__(self,time):
+	self.time =time
+      	threading.Thread.__init__(self)
 
     def check_ping(self,hostname):
         response = os.system("ping -c 1 " + hostname)
@@ -174,8 +175,8 @@ class ping_Thread (threading.Thread):
         return (True,"")
 
     def run(self):
-	print "Ping Tread Will start in 35 seconds"
-	time.sleep(35)
+	print "Ping Tread Will start in "+str(self.time)+" seconds"
+	time.sleep(self.time)
 	print "Ping Thread Started"
 	while True:
 		try: 
@@ -186,7 +187,7 @@ class ping_Thread (threading.Thread):
 
             	if result==False:
                 	logE("PING FAIL TO " + host,"/home/pi/garageLog.log")
-        	time.sleep(35)
+        	time.sleep(self.time)
 
 
 class Server:
@@ -213,7 +214,7 @@ class Server:
 
 
 try:
-    	pThread = ping_Thread()
+    	pThread = ping_Thread(2)
     	pThread.start()
 	s = Server(PORT)
 	s.runServer()
